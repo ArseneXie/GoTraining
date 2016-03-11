@@ -3,11 +3,16 @@ package main
 import "fmt"
 
 func main() {
-	var MyName string
-	fmt.Println("Whar is your name? ")
-	_,  err := fmt.Scan(&MyName)
-	if err != nil {
-		fmt.Println("Error: ", err)
-	}
-	fmt.Println("Hello,",MyName)
+	var minnum int
+	var maxnum int
+
+	fmt.Print("Please enter a min number:  ")
+	fmt.Scanln(&minnum)
+
+	fmt.Print("Please enter a Max number:  ")
+	fmt.Scanln(&maxnum)
+
+	fmt.Println("What you enter min is ", minnum, " and the Max is ", maxnum)
+
+	fmt.Println("Max mod min is ", maxnum%minnum)
 }

@@ -3,16 +3,16 @@ package main
 import "fmt"
 
 func main() {
-	var minnum int
-	var maxnum int
+	var numone int
+	var numtwo int
 
-	fmt.Print("Please enter a min number:  ")
-	fmt.Scanln(&minnum)
+	fmt.Print("Please enter two  numbers:  ")
+	fmt.Scanln(&numone, &numtwo)
 
-	fmt.Print("Please enter a Max number:  ")
-	fmt.Scanln(&maxnum)
+	if numone > numtwo {
+		fmt.Println("Max mod min is ", numone%numtwo)
+	} else {
+		fmt.Println("Max mod min is ", numtwo%numone)
+	}
 
-	fmt.Println("What you enter min is ",minnum, " and the Max is ", maxnum)
-
-	fmt.Println("Max mod min is ", maxnum%minnum)
 }

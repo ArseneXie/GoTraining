@@ -3,27 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Print 3 mul as Fuzz, 5 mul as Buzz  from 1 to 100")
+	fmt.Println("Sum all the mul of 3 and 5 under 1000")
 
-	//astring :=""
-	//bstring:=""
+	sum := 0
 
-	var astring string
-	var bstring string
+	for i := 1 ; i < 1000; i++ {
 
-	for i := 1; i <= 100; i++ {
-
-		if i%3 == 0 {
-			astring = "Fizz"
-		} else {
-			astring = ""
+		if i%3 == 0 || i%5 == 0 {
+			sum = sum + i
+			// or sum += i
+			//fmt.Println(i)
 		}
-		if i%5 == 0 {
-			bstring = "Buzz"
-		} else {
-			bstring = ""
-		}
-		fmt.Println(i, " show as ", astring+bstring)
-
 	}
+
+	fmt.Println("Sum of 3,5 multiple as ", sum)
 }
